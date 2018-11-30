@@ -230,7 +230,6 @@ module.exports = function (/*Buffer*/input) {
                 _entryHeader.method = Utils.Constants.DEFLATED;
                 _entryHeader.crc = Utils.crc32(value);
                 _entryHeader.changed = true;
-            } else { // folders and blank files should be stored
                 _entryHeader.method = Utils.Constants.STORED;
             }
         },
